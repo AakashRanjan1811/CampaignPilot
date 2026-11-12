@@ -31,7 +31,7 @@ class Settings:
     llm_temperature: float = field(default_factory=lambda: _env_float("LLM_TEMPERATURE", 0.2))
 
     # Campaign and governance policy
-    budget: float = field(default_factory=lambda: _env_float("CAMPAIGN_BUDGET", 400.0))
+    budget: float = field(default_factory=lambda: _env_float("CAMPAIGN_BUDGET", 250.0))
     max_discount_pct: float = field(default_factory=lambda: _env_float("MAX_DISCOUNT_PCT", 30.0))
     vip_max_discount_pct: float = field(default_factory=lambda: _env_float("VIP_MAX_DISCOUNT_PCT", 10.0))
     frequency_cap_days: int = field(default_factory=lambda: _env_int("FREQUENCY_CAP_DAYS", 7))
