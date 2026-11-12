@@ -15,11 +15,13 @@ class SegmentStrategy(BaseModel):
     segment_id: int = Field(description="segment_id copied exactly from the segment profile")
     objective: Objective = Field(description="Business objective for this segment")
     offer: Offer = Field(description="Incentive type from the allowed catalog")
-    discount_pct: float = Field(ge=0, le=100, description="Discount percentage; must be 0 unless offer is percent_discount")
+    discount_pct: float = Field(ge=0, le=100,
+                                description="Discount percentage; must be 0 unless offer is percent_discount")
     preferred_channel: Channel = Field(description="Channel the strategist recommends")
     send_hour: int = Field(ge=0, le=23, description="Local hour (0-23) to send the message")
     message: str = Field(min_length=10, max_length=400, description="Customer-facing message text")
-    rationale: str = Field(min_length=5, max_length=400, description="One or two sentences explaining the choice, citing segment data")
+    rationale: str = Field(min_length=5, max_length=400,
+                           description="One or two sentences explaining the choice, citing segment data")
 
 
 class StrategyPlan(BaseModel):

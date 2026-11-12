@@ -1,0 +1,16 @@
+# Tested with Python 3.11-3.13. Versions in comments are the ones verified locally.
+langgraph>=1.0,<2            # 1.2.21
+langchain-core>=1.0,<2       # 1.8.0
+langchain-groq>=1.0,<2       # 1.1.3
+langchain-ollama>=1.0,<2     # 1.1.0
+pydantic>=2.7,<3             # 2.13.5
+scikit-learn>=1.4            # 1.9.1
+pandas>=2.1                  # 3.0.5
+numpy>=1.26                  # 2.5.3
+streamlit>=1.40              # 1.67.0
+plotly>=5.20                 # 7.1.0
+fastapi>=0.115               # 0.162.5
+uvicorn>=0.30                # 0.54.0
+python-dotenv>=1.0           # 1.2.3
+tabulate>=0.9                # 0.10.0
+openpyxl>=3.1                # only needed to load the UCI .xlsx file

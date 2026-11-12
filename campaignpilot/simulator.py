@@ -81,7 +81,7 @@ def simulate(sends: list[dict], customers: pd.DataFrame, rfm: pd.DataFrame,
             recent = (rows["days_since_last_contact"] < frequency_cap_days).to_numpy()
             probs = np.array([
                 response_probability(personas.get(cid, "hibernating"), s["offer"], s["discount_pct"], e, r)
-                for cid, e, r in zip(ids, eng, recent)
+                for cid, e, r in zip(ids, eng, recent, strict=True)
             ])
             bought = rng.random(sent) < probs
             values = aov.loc[ids].to_numpy()[bought]

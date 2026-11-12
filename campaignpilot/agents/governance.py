@@ -91,7 +91,8 @@ def check_plan(plan: StrategyPlan, channel_plan: ChannelPlan, profiles: list[dic
                                    detail=f"{alloc.channel} message is {len(s.message)} chars (limit {limit})."))
             if alloc.eligible < settings.min_channel_coverage * sizes[s.segment_id]:
                 v.append(Violation(segment_id=s.segment_id, rule="low_channel_coverage", severity="warn",
-                                   detail=f"{alloc.channel} reaches only {alloc.eligible}/{sizes[s.segment_id]} customers."))
+                                   detail=f"{alloc.channel} reaches only {alloc.eligible}/"
+                                          f"{sizes[s.segment_id]} customers."))
 
     lookup = customers.set_index("customer_id")
     for alloc in channel_plan.allocations:

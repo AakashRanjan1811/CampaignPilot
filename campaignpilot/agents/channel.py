@@ -88,7 +88,7 @@ def run_channel_agent(plan: StrategyPlan, profiles: list[dict], rfm: pd.DataFram
 
     remaining = settings.budget
     allocations = []
-    for ratio, strat, profile, channel, ev, audience, no_consent, capped, reason in sorted(
+    for _ratio, strat, profile, channel, ev, audience, no_consent, capped, reason in sorted(
             candidates, key=lambda c: c[0], reverse=True):
         unit = CHANNEL_COST_INR[channel]
         if ev <= 0:

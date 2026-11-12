@@ -117,10 +117,11 @@ def summarise(per_seed: list[dict[str, dict]]) -> pd.DataFrame:
     rows = []
     for method in per_seed[0]:
         vals = pd.DataFrame([r[method] for r in per_seed])
+        cr_mean, cr_std = 100 * vals["conversion_rate"].mean(), 100 * vals["conversion_rate"].std()
         rows.append({
             "method": method,
             "conversions": f"{vals['conversions'].mean():.1f}",
-            "conversion_rate": f"{100 * vals['conversion_rate'].mean():.1f}% ± {100 * vals['conversion_rate'].std():.1f}",
+            "conversion_rate": f"{cr_mean:.1f}% ± {cr_std:.1f}",
             "profit_inr": f"{vals['profit'].mean():,.0f} ± {vals['profit'].std():,.0f}",
             "roi_on_spend": f"{vals['roi'].mean():.2f}x",
             "policy_breaching_contacts": f"{vals['breaches'].mean():.1f}",

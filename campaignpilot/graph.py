@@ -17,7 +17,7 @@ from __future__ import annotations
 import operator
 import uuid
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Annotated, Any, TypedDict
 
 import pandas as pd
@@ -66,7 +66,7 @@ class CampaignContext:
 
 
 def _audit(agent: str, event: str, detail: str = "") -> list[dict]:
-    return [{"at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "agent": agent,
+    return [{"at": datetime.now(UTC).isoformat(timespec="seconds"), "agent": agent,
              "event": event, "detail": detail}]
 
 

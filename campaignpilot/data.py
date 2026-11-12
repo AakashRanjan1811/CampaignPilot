@@ -67,7 +67,7 @@ def generate_synthetic(n_customers: int = 2000, seed: int = 7, end_date: str = "
 
     rows = []
     invoice = 500000
-    for cid, persona in zip(ids, personas):
+    for cid, persona in zip(ids, personas, strict=True):
         spec = PERSONAS[persona]
         n_orders = int(rng.integers(spec["orders"][0], spec["orders"][1] + 1))
         last = int(rng.integers(spec["last"][0], spec["last"][1] + 1))
