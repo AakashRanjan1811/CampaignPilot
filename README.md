@@ -5,6 +5,8 @@
 [![CI](https://github.com/AakashRanjan1811/CampaignPilot/actions/workflows/ci.yml/badge.svg)](https://github.com/AakashRanjan1811/CampaignPilot/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.11%20|%203.12-blue)
 ![LangGraph](https://img.shields.io/badge/orchestration-LangGraph-4F46E5)
+![Tests](https://img.shields.io/badge/tests-53%20passing-success)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 > On 10 simulated datasets (2,000 customers each, same ₹250 budget), CampaignPilot earned **~2.1× the profit of rule-based RFM targeting and ~2.8× a blanket-discount campaign, with zero policy-breaching contacts**. See [Evaluation](#-evaluation).
 
